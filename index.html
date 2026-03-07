@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sulakshana Portfolio Dashboard</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+display:flex;
+height:100vh;
+}
+
+/* Dashboard Sidebar */
+
+.sidebar{
+width:220px;
+background:#1e293b;
+color:white;
+padding-top:20px;
+}
+
+.sidebar h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+.sidebar div{
+padding:15px;
+cursor:pointer;
+border-bottom:1px solid #334155;
+}
+
+.sidebar div:hover{
+background:#334155;
+}
+
+/* Content Area */
+
+.content{
+flex:1;
+padding:30px;
+background:#f1f5f9;
+}
+
+.section{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:15px 0;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Dashboard -->
+
+<div class="sidebar">
+
+<h2>Dashboard</h2>
+
+<div onclick="showSection('home')">🏠 Home</div>
+<div onclick="showSection('about')">👩 About</div>
+<div onclick="showSection('skills')">💻 Skills</div>
+<div onclick="showSection('projects')">📁 Projects</div>
+<div onclick="showSection('education')">🎓 Education</div>
+<div onclick="showSection('contact')">📞 Contact</div>
+
+</div>
+
+
+<!-- Content Area -->
+
+<div class="content">
+
+<!-- Home -->
+
+<div id="home" class="section active">
+<h1>Welcome</h1>
+<div class="card">
+<p>Hello! I'm <b>Sulakshana Manchikanti</b></p>
+<p>Computer Science Student specializing in AI & ML.</p>
+</div>
+</div>
+
+<!-- About -->
+
+<div id="about" class="section">
+<h1>About Me</h1>
+<div class="card">
+<p>I am a Computer Science undergraduate with strong skills in
+Data Structures and Object-Oriented Programming. I enjoy
+building web applications and solving real-world problems.</p>
+</div>
+</div>
+
+<!-- Skills -->
+
+<div id="skills" class="section">
+<h1>Technical Skills</h1>
+
+<div class="card">
+<b>Programming</b>
+<p>C, Java</p>
+</div>
+
+<div class="card">
+<b>Web Development</b>
+<p>HTML, CSS, JavaScript</p>
+</div>
+
+<div class="card">
+<b>Database</b>
+<p>MySQL</p>
+</div>
+
+<div class="card">
+<b>Tools</b>
+<p>Git, GitHub, VS Code</p>
+</div>
+
+</div>
+
+<!-- Projects -->
+
+<div id="projects" class="section">
+<h1>Projects</h1>
+
+<div class="card">
+<h3>House Hunt – MERN Stack</h3>
+<p>Property listing app with authentication and CRUD operations.</p>
+</div>
+
+<div class="card">
+<h3>Signature Matching System</h3>
+<p>Machine learning based signature verification with 92% accuracy.</p>
+</div>
+
+<div class="card">
+<h3>Netflix Data Analysis</h3>
+<p>Analyzed 6000+ titles using Python and Pandas.</p>
+</div>
+
+</div>
+
+<!-- Education -->
+
+<div id="education" class="section">
+
+<h1>Education</h1>
+
+<div class="card">
+<b>B.Tech CSE (AI & ML)</b>
+<p>Srinivasa Ramanujan Institute of Technology</p>
+<p>CGPA: 8.09</p>
+</div>
+
+<div class="card">
+<b>Intermediate</b>
+<p>J.C.N.R.M Junior College</p>
+</div>
+
+<div class="card">
+<b>Schooling</b>
+<p>Sri Vasavi Vidhyanikethan School</p>
+</div>
+
+</div>
+
+<!-- Contact -->
+
+<div id="contact" class="section">
+
+<h1>Contact</h1>
+
+<div class="card">
+<p>Email: sulakshanamanchikanti@gmail.com</p>
+<p>Phone: 9392093948</p>
+<p>GitHub: github.com/sulakshana18</p>
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function showSection(id){
+
+let sections=document.querySelectorAll(".section");
+
+sections.forEach(section=>{
+section.classList.remove("active");
+});
+
+document.getElementById(id).classList.add("active");
+
+}
+
+</script>
+
+</body>
+</html>
