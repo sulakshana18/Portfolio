@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section class="section page-intro">
+  <div class="container">
+
+    <span class="eyebrow">Certifications</span>
+
+    <h1>Learning milestones and skill-building achievements</h1>
+
+    <p>
+      Professional certifications and continuous learning achievements
+      supporting my journey in
+      <strong>Software Engineering, Artificial Intelligence & Machine Learning,
+      Cloud Computing and Full-Stack Development</strong>.
+    </p>
+
+    <p>
+      I continuously develop my technical knowledge through certifications,
+      hands-on projects, coding practice and practical implementation of
+      modern technologies.
+    </p>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container certification-grid">
+
+    {% for item in certifications %}
+
+      <article class="cert-card">
+
+        <div class="cert-icon">✓</div>
+
+        <div>
+
+          <h3>{{ item.name }}</h3>
+
+          <p class="issuer">
+            {{ item.issuer }}
+          </p>
+
+          <p class="year">
+            {{ item.year }}
+          </p>
+
+          <p>
+            {{ item.description }}
+          </p>
+
+        </div>
+
+      </article>
+
+    {% endfor %}
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <div class="about-card">
+
+      <span class="eyebrow">Professional Development</span>
+
+      <h2>Continuous Learning</h2>
+
+      <p>
+        As a Computer Science and Engineering student specializing in
+        Artificial Intelligence & Machine Learning, I continuously work on
+        strengthening my technical foundation through certifications,
+        projects and practical learning.
+      </p>
+
+      <p>
+        My learning areas include
+        <strong>Artificial Intelligence, Machine Learning, Computer Vision,
+        Python, Java, Web Development, Databases, Cloud Computing,
+        AWS and Software Engineering</strong>.
+      </p>
+
+      <p>
+        I believe certifications are most valuable when combined with
+        hands-on implementation. I therefore apply the concepts learned
+        through certifications to academic and personal projects.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container certification-grid">
+
+    <article class="cert-card">
+
+      <div class="cert-icon">☁</div>
+
+      <div>
+
+        <h3>AWS Certified Cloud Practitioner</h3>
+
+        <p class="issuer">
+          Amazon Web Services (AWS)
+        </p>
+
+        <p class="year">
+          2026
+        </p>
+
+        <p>
+          Foundational understanding of AWS Cloud concepts, core AWS services,
+          cloud architecture concepts, security, pricing, billing and
+          cloud computing fundamentals.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="cert-card">
+
+      <div class="cert-icon">AI</div>
+
+      <div>
+
+        <h3>Artificial Intelligence & Machine Learning</h3>
+
+        <p class="issuer">
+          Academic & Project-Based Learning
+        </p>
+
+        <p class="year">
+          2023 – 2027
+        </p>
+
+        <p>
+          Hands-on learning in machine learning, deep learning, computer
+          vision, NLP and AI application development through coursework
+          and practical projects.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="cert-card">
+
+      <div class="cert-icon">⌘</div>
+
+      <div>
+
+        <h3>Software & Full-Stack Development</h3>
+
+        <p class="issuer">
+          Academic & Project-Based Learning
+        </p>
+
+        <p class="year">
+          2023 – 2027
+        </p>
+
+        <p>
+          Practical experience with Python, Java, HTML, CSS, JavaScript,
+          React, Flask, Node.js, REST APIs, SQL, MySQL and Supabase.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="cert-card">
+
+      <div class="cert-icon">CV</div>
+
+      <div>
+
+        <h3>Computer Vision & Image Processing</h3>
+
+        <p class="issuer">
+          Project-Based Learning
+        </p>
+
+        <p class="year">
+          2024 – 2026
+        </p>
+
+        <p>
+          Practical experience with YOLO and OpenCV through computer vision
+          projects including real-time object detection and image-processing
+          applications.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <div class="about-card">
+
+      <span class="eyebrow">Technical Profile</span>
+
+      <h2>Skills Supported by My Learning</h2>
+
+      <p>
+        <strong>Programming:</strong>
+        Python, Java, C, JavaScript and SQL
+      </p>
+
+      <p>
+        <strong>AI & ML:</strong>
+        Machine Learning, Deep Learning, Computer Vision,
+        YOLO and OpenCV
+      </p>
+
+      <p>
+        <strong>Web Development:</strong>
+        HTML, CSS, JavaScript, React, Flask and Node.js
+      </p>
+
+      <p>
+        <strong>Database:</strong>
+        MySQL, Supabase and SQL
+      </p>
+
+      <p>
+        <strong>Cloud:</strong>
+        AWS and Cloud Computing
+      </p>
+
+      <p>
+        <strong>Tools:</strong>
+        Git, GitHub, VS Code and Jupyter Notebook
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

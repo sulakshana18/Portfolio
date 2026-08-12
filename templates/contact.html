@@ -1,0 +1,285 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section class="section page-intro">
+  <div class="container narrow">
+    <span class="eyebrow">Contact</span>
+    <h1>Let’s connect and build something meaningful.</h1>
+
+    <p>
+      I’m a Computer Science and Engineering student specializing in
+      Artificial Intelligence & Machine Learning, interested in Software
+      Engineering, AI/ML, Full-Stack Development and Cloud Computing
+      opportunities.
+    </p>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container contact-layout">
+
+    <div class="contact-card">
+      <h3>Contact Information</h3>
+
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:sulakshanamanchikanti@gmail.com">
+          sulakshanamanchikanti@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <strong>Phone:</strong>
+        <a href="tel:+919392093948">
+          +91 9392093948
+        </a>
+      </p>
+
+      <p>
+        <strong>Location:</strong>
+        Andhra Pradesh, India
+      </p>
+
+      <p>
+        <strong>Education:</strong>
+        B.Tech in Computer Science & Engineering (AI & ML)
+      </p>
+
+      <p>
+        <strong>College:</strong>
+        Srinivasa Ramanujan Institute of Technology
+      </p>
+
+      <p>
+        <strong>Graduation:</strong>
+        2027
+      </p>
+
+      <p>
+        <strong>CGPA:</strong>
+        8.14
+      </p>
+
+      <p>
+        <strong>Career Interests:</strong>
+        Software Engineering, AI/ML, Full-Stack Development and Cloud Computing
+      </p>
+
+      <div class="contact-social-links">
+
+        <a
+          href="https://github.com/sulakshana18"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/sulakshana-manchikanti-78087629/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+      </div>
+    </div>
+
+
+    <form class="contact-form" method="POST" action="{{ url_for('contact') }}">
+
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+
+
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+
+      <div class="form-row">
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Internship / Job Opportunity / Collaboration"
+          required
+        />
+      </div>
+
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message..."
+          required
+        ></textarea>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <div class="contact-card">
+
+      <span class="eyebrow">Professional Profile</span>
+
+      <h2>Open to Opportunities</h2>
+
+      <p>
+        I am currently looking for opportunities where I can apply my
+        programming, AI/ML and software development skills while learning
+        from experienced engineering teams and contributing to real-world
+        projects.
+      </p>
+
+      <div class="skills-summary">
+
+        <p>
+          <strong>Programming:</strong>
+          Python, Java, C, JavaScript, SQL
+        </p>
+
+        <p>
+          <strong>AI & ML:</strong>
+          Machine Learning, Deep Learning, Computer Vision, YOLO, OpenCV
+        </p>
+
+        <p>
+          <strong>Web Development:</strong>
+          HTML, CSS, JavaScript, React, Flask, Node.js, REST APIs
+        </p>
+
+        <p>
+          <strong>Database:</strong>
+          MySQL, Supabase, SQL
+        </p>
+
+        <p>
+          <strong>Cloud:</strong>
+          AWS, Cloud Computing, AWS Certified Cloud Practitioner
+        </p>
+
+        <p>
+          <strong>Tools:</strong>
+          Git, GitHub, VS Code, Jupyter Notebook
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container contact-layout">
+
+    <div class="contact-card">
+
+      <span class="eyebrow">Featured Work</span>
+
+      <h3>Projects</h3>
+
+      <p>
+        <strong>AI Career Guidance System</strong><br>
+        AI-powered career recommendation platform designed to provide
+        personalized career guidance based on skills, interests and goals.
+      </p>
+
+      <p>
+        <strong>Object Detection System</strong><br>
+        Computer vision project using YOLO and OpenCV for object detection
+        from images and video.
+      </p>
+
+      <p>
+        <strong>Student Management System</strong><br>
+        Python and SQL based CRUD application for managing student records.
+      </p>
+
+      <p>
+        <strong>College Portal</strong><br>
+        Full-stack web application focused on providing useful college
+        information and functionality.
+      </p>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <span class="eyebrow">Connect</span>
+
+      <h3>Find Me Online</h3>
+
+      <p>
+        Explore my projects, coding work and professional background through
+        my online profiles.
+      </p>
+
+      <div class="contact-social-links">
+
+        <a
+          href="https://github.com/sulakshana18"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/sulakshana-manchikanti-780876294"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View LinkedIn
+        </a>
+
+        <a
+          href="mailto:sulakshanamanchikanti@gmail.com"
+        >
+          Send Email
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

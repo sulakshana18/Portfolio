@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Sulakshana Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</head>
+
+<body>
+    <div id="three-bg"></div>
+
+<!-- AI Animated Background -->
+
+<canvas id="bg"></canvas>
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+<img src="profile.jpg" class="profile">
+
+<h1>Manchikanti Sulakshana</h1>
+
+<h2 class="typing"></h2>
+
+<a href="resume.pdf" download>
+<button class="btn">Download Resume</button>
+</a>
+
+</section>
+
+<!-- About -->
+
+<section class="glass reveal">
+
+<h2>About Me</h2>
+
+<p>
+Computer Science student specializing in AI & ML with strong
+skills in Data Structures, OOP and Web Development.
+</p>
+
+</section>
+
+<!-- Skills -->
+
+<section class="glass reveal">
+
+<h2>Skills</h2>
+
+<div class="skill">
+
+<p>Java</p>
+
+<div class="bar"><div class="progress" style="width:85%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<p>HTML / CSS</p>
+
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+
+</div>
+
+<div class="skill">
+
+<p>JavaScript</p>
+
+<div class="bar"><div class="progress" style="width:75%"></div></div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+
+<section class="glass reveal">
+
+<h2>Projects</h2>
+
+<div id="githubProjects" class="projects"></div>
+
+</section>
+
+<!-- Timeline -->
+
+<section class="glass reveal">
+
+<h2>Education Timeline</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>B.Tech CSE (AI & ML)</h3>
+
+<p>Srinivasa Ramanujan Institute of Technology</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Intermediate</h3>
+
+<p>J.C.N.R.M Junior College</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>SSC</h3>
+
+<p>Sri Vasavi Vidhyanikethan School</p>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+<!-- Chatbot Button -->
+
+<div id="chatbot">
+
+<div id="chatHeader">AI Assistant</div>
+
+<div id="chatBody"></div>
+
+<input id="chatInput" placeholder="Ask something...">
+
+<button onclick="sendMessage()">Send</button>
+
+</div>
+<section class="glass">
+
+<h2>GitHub Contributions</h2>
+
+<img src="https://ghchart.rshah.org/sulakshana18">
+
+</section>
+
+
+</body>
+</html>

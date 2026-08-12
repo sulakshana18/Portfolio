@@ -1,0 +1,255 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<section class="section page-intro">
+  <div class="container narrow">
+
+    {% if admin_page %}
+      <span class="eyebrow">Admin Login</span>
+      <h1>Secure Portfolio Admin</h1>
+
+      <p>
+        Welcome to the secure administration panel of
+        <strong>Sulakshana Manchikanti's</strong> professional portfolio.
+      </p>
+
+      <p>
+        This dashboard is used to securely manage and review messages
+        submitted by recruiters, employers, collaborators and visitors.
+      </p>
+
+    {% else %}
+      <span class="eyebrow">Admin Dashboard</span>
+      <h1>Portfolio Messages</h1>
+
+      <p>
+        Welcome back, <strong>Sulakshana Manchikanti</strong>.
+        Manage and review messages received through your professional portfolio.
+      </p>
+    {% endif %}
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container admin-panel">
+
+    {% if admin_page %}
+
+      <!-- Developer Profile -->
+      <div class="about-card">
+
+        <span class="eyebrow">Portfolio Owner</span>
+
+        <h3>Sulakshana Manchikanti</h3>
+
+        <p>
+          <strong>Computer Science & Engineering —
+          Artificial Intelligence & Machine Learning</strong>
+        </p>
+
+        <p>
+          Srinivasa Ramanujan Institute of Technology
+        </p>
+
+        <p>
+          <strong>2023 – 2027</strong>
+          &nbsp; | &nbsp;
+          <strong>CGPA: 8.14</strong>
+        </p>
+
+        <p>
+          Software Engineering • AI/ML • Full-Stack Development •
+          Cloud Computing
+        </p>
+
+      </div>
+
+
+      <!-- Admin Login -->
+      <form class="admin-form" method="POST" action="{{ url_for('admin') }}">
+
+        <div class="form-row">
+          <label>Username</label>
+          <input type="text" name="username" required />
+        </div>
+
+        <div class="form-row">
+          <label>Password</label>
+          <input type="password" name="password" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Login
+        </button>
+
+      </form>
+
+
+      <!-- Professional Information -->
+      <div class="about-card">
+
+        <h3>Professional Profile</h3>
+
+        <p>
+          <strong>Technical Skills:</strong>
+          Python, Java, C, JavaScript, HTML, CSS, React, Flask,
+          Node.js, SQL, MySQL, Supabase, Git and GitHub.
+        </p>
+
+        <p>
+          <strong>AI/ML:</strong>
+          Machine Learning, Deep Learning, Computer Vision,
+          YOLO, OpenCV and related AI technologies.
+        </p>
+
+        <p>
+          <strong>Cloud:</strong>
+          AWS and Cloud Computing.
+        </p>
+
+        <p>
+          <strong>Certification:</strong>
+          AWS Certified Cloud Practitioner.
+        </p>
+
+        <p>
+          <strong>Primary Projects:</strong>
+          AI Career Guidance System, Object Detection System,
+          Student Management System, College Portal and
+          Signature Matching System.
+        </p>
+
+      </div>
+
+    {% else %}
+
+      <div class="admin-actions">
+
+        <a href="{{ url_for('admin_logout') }}" class="btn btn-secondary">
+          Logout
+        </a>
+
+      </div>
+
+
+      <!-- Admin Profile Summary -->
+      <div class="about-card">
+
+        <span class="eyebrow">Portfolio Owner</span>
+
+        <h3>Sulakshana Manchikanti</h3>
+
+        <p>
+          <strong>B.Tech CSE — Artificial Intelligence & Machine Learning</strong>
+        </p>
+
+        <p>
+          Srinivasa Ramanujan Institute of Technology
+          | 2023 – 2027
+          | CGPA: 8.14
+        </p>
+
+        <p>
+          Interested in Software Engineering, AI/ML,
+          Full-Stack Development and Cloud Computing opportunities.
+        </p>
+
+      </div>
+
+
+      <!-- Contact Information -->
+      <div class="about-card">
+
+        <h3>Professional Contact</h3>
+
+        <p>
+          <strong>Email:</strong>
+          sulakshanamanchikanti@gmail.com
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          +91 9392093948
+        </p>
+
+        <p>
+          <strong>Location:</strong>
+          Andhra Pradesh, India
+        </p>
+
+        <p>
+          <strong>GitHub:</strong>
+          <a
+            href="https://github.com/sulakshana18"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github.com/sulakshana18
+          </a>
+        </p>
+
+        <p>
+          <strong>LinkedIn:</strong>
+          <a
+            href="https://www.linkedin.com/in/sulakshana-manchikanti-78087629/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn Profile
+          </a>
+        </p>
+
+      </div>
+
+
+      {% if messages %}
+
+        <div class="messages-list">
+
+          {% for message in messages %}
+
+            <div class="message-item">
+
+              <h3>{{ message.name }}</h3>
+
+              <p>
+                <strong>Email:</strong>
+                {{ message.email }}
+              </p>
+
+              <p>
+                <strong>Subject:</strong>
+                {{ message.subject }}
+              </p>
+
+              <p>
+                <strong>Message:</strong>
+                {{ message.message }}
+              </p>
+
+              <small>
+                {{ message.created_at }}
+              </small>
+
+            </div>
+
+          {% endfor %}
+
+        </div>
+
+      {% else %}
+
+        <p class="empty-state">
+          No messages yet.
+        </p>
+
+      {% endif %}
+
+    {% endif %}
+
+  </div>
+</section>
+{% endblock %}

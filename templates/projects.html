@@ -1,0 +1,421 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section class="section page-intro">
+
+  <div class="container">
+
+    <span class="eyebrow">Projects</span>
+
+    <h1>Hands-on work and practical learning</h1>
+
+    <p>
+      A collection of academic and personal projects developed by
+      <strong>Sulakshana Manchikanti</strong>, a Computer Science and
+      Engineering student specializing in
+      <strong>Artificial Intelligence & Machine Learning</strong>.
+    </p>
+
+    <p>
+      These projects demonstrate practical experience across
+      <strong>Artificial Intelligence, Machine Learning, Computer Vision,
+      Full-Stack Development, Python, Java, Web Development, Databases
+      and Cloud Computing</strong>.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">Technical Portfolio</span>
+
+      <h2>Projects & Practical Experience</h2>
+
+      <p>
+        I believe the best way to learn technology is by building real
+        applications. My projects focus on solving practical problems
+        while strengthening programming, software engineering and
+        AI/ML skills.
+      </p>
+
+    </div>
+
+
+    <div class="projects-grid large-grid">
+
+      {% for project in projects %}
+
+        <article class="project-card detail-card">
+
+          <img
+            src="{{ project.image or url_for('static', filename='images/profile.jpg') }}"
+            alt="{{ project.title }}"
+          />
+
+          <div class="project-body">
+
+            <h3>{{ project.title }}</h3>
+
+            <p>{{ project.description }}</p>
+
+            <div class="tech-tags">
+
+              {% for tech in project.tech.split(',') %}
+
+                <span>{{ tech.strip() }}</span>
+
+              {% endfor %}
+
+            </div>
+
+            {% if project.link and project.link != '#' %}
+
+              <a
+                href="{{ project.link }}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Explore
+              </a>
+
+            {% endif %}
+
+          </div>
+
+        </article>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section alt-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">Featured Projects</span>
+
+      <h2>Key Projects</h2>
+
+      <p>
+        Selected projects that represent my interests in AI/ML,
+        software development, computer vision and full-stack engineering.
+      </p>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+      <div class="skill-card">
+
+        <h3>🤖 AI Career Guidance System</h3>
+
+        <p>
+          An AI-powered career guidance platform designed to provide
+          personalized career recommendations based on a user's
+          skills, interests and career goals.
+        </p>
+
+        <p>
+          <strong>Focus:</strong>
+          Artificial Intelligence, NLP, Recommendation Systems,
+          Full-Stack Development
+        </p>
+
+        <p>
+          <strong>Technologies:</strong>
+          Python, AI/ML, React, Flask, Supabase
+        </p>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>👁 Object Detection System</h3>
+
+        <p>
+          A computer vision application developed using YOLO and
+          OpenCV for detecting and identifying objects from images
+          and video streams.
+        </p>
+
+        <p>
+          <strong>Focus:</strong>
+          Computer Vision, Deep Learning, Object Detection
+        </p>
+
+        <p>
+          <strong>Technologies:</strong>
+          Python, YOLO, OpenCV
+        </p>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>🎓 Student Management System</h3>
+
+        <p>
+          A CRUD-based application for managing student information,
+          demonstrating database operations and software development
+          fundamentals.
+        </p>
+
+        <p>
+          <strong>Focus:</strong>
+          CRUD Operations, Database Management, Application Development
+        </p>
+
+        <p>
+          <strong>Technologies:</strong>
+          Python, HTML, CSS, JavaScript, SQL
+        </p>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>🏫 College Portal</h3>
+
+        <p>
+          A full-stack college portal designed to provide useful
+          college-related information and functionality through a
+          structured web interface.
+        </p>
+
+        <p>
+          <strong>Focus:</strong>
+          Full-Stack Development, Responsive Web Design,
+          Backend and Database Integration
+        </p>
+
+        <p>
+          <strong>Technologies:</strong>
+          HTML, CSS, JavaScript, React, Backend and Database
+        </p>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>✍️ Signature Matching System</h3>
+
+        <p>
+          A computer vision and image-processing project focused on
+          comparing signatures and identifying similarities between
+          signature samples.
+        </p>
+
+        <p>
+          <strong>Focus:</strong>
+          Image Processing, Computer Vision, Pattern Recognition
+        </p>
+
+        <p>
+          <strong>Technologies:</strong>
+          Python, Image Processing, Computer Vision
+        </p>
+
+      </div>
+
+
+      <div class="skill-card">
+
+        <h3>📚 Additional Development Work</h3>
+
+        <p>
+          Hands-on practice involving Python programming, Java,
+          SQL, web development, REST APIs, database management,
+          Git/GitHub and cloud computing concepts.
+        </p>
+
+        <p>
+          <strong>Focus:</strong>
+          Software Engineering, Problem Solving and Continuous Learning
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">Technical Areas</span>
+
+      <h2>What My Projects Demonstrate</h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+
+      <div class="about-card">
+
+        <h3>Artificial Intelligence</h3>
+
+        <p>
+          Applying AI and machine learning concepts to create
+          practical applications and intelligent recommendation
+          systems.
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>Computer Vision</h3>
+
+        <p>
+          Experience with YOLO, OpenCV, image processing and
+          object detection through hands-on computer vision projects.
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>Software Development</h3>
+
+        <p>
+          Building applications using Python, Java, JavaScript,
+          HTML, CSS, Flask, React and database technologies.
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>Database Development</h3>
+
+        <p>
+          Working with SQL, MySQL and Supabase for storing,
+          retrieving and managing application data.
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>Cloud Computing</h3>
+
+        <p>
+          Developing foundational cloud knowledge through AWS
+          and the AWS Certified Cloud Practitioner certification.
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>Problem Solving</h3>
+
+        <p>
+          Strengthening data structures, algorithms, programming
+          fundamentals and logical problem-solving skills through
+          coding practice.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section alt-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">Professional Profile</span>
+
+      <h2>Let's Connect</h2>
+
+      <p>
+        I am interested in internship and entry-level opportunities
+        in Software Engineering, AI/ML, Full-Stack Development and
+        Cloud Computing.
+      </p>
+
+    </div>
+
+
+    <div class="hero-actions">
+
+      <a
+        href="mailto:sulakshanamanchikanti@gmail.com"
+        class="btn btn-primary"
+      >
+        Contact Me
+      </a>
+
+
+      <a
+        href="https://github.com/sulakshana18"
+        class="btn btn-secondary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+
+
+      <a
+        href="https://www.linkedin.com/in/sulakshana-manchikanti-78087629/"
+        class="btn btn-secondary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+{% endblock %}
